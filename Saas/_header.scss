@@ -23,7 +23,7 @@ header {
         }
 
         .menu {
-            display: flex;
+            display: flex ;
             align-items: center;
             justify-content: space-between;
             gap: 30px;
@@ -60,9 +60,54 @@ header {
         .btn-contact:hover {
             background-position: right;
         }
-
-        .menu-mobile {
-            display: none;
-        }
     }
+}
+
+
+
+
+@media screen and (max-width:1050px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;
+    border: none;
+  }
+
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* Cor das barras */
+    transition: 0.3s;
+  }
+
+  .menu {
+    display: none !important; // Esconde o menu fixo
+    flex-direction: column;
+    position: absolute;
+    top: 80px; // Aumente um pouco para não cobrir a borda do header
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 999;
+  }
+
+  // Isso garante que o clique funcione
+  .menu.active {
+    display: flex !important;
+  }
+
+
+  .menu a {
+    padding: 15px 0;
+  }
+}
+
+/* Esconde o botão hambúrguer em telas grandes */
+@media screen and (min-width: 1050px) {
+  .menu-toggle {
+    display: none;
+  }
 }

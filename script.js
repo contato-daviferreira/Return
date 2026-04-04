@@ -1,9 +1,12 @@
-const menu = document.querySelector('.menu')
-const mobile = document.querySelector('.menu-mobile')
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.menu');
 
-mobile.addEventListener('click', () => {
-    menu.classList.toggle('active')
-})
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+});
+
 
 // Pegue o elemento do formulário e o botão
 const meuForm = document.getElementById('form'); // Verifique se o seu <form> tem id="form"
@@ -44,3 +47,4 @@ meuForm.addEventListener('submit', function(event) {
       btnEnviar.disabled = false;
     });
 });
+

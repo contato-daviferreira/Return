@@ -108,6 +108,7 @@
                     font-size: 14px;
                     transition: 0.3s ease;
                 }
+
                 .input-group label {
                     position: absolute;
                     left: 0;
@@ -152,15 +153,34 @@
 }
 
 
-@media(max-width:900px) {
+@media(max-width:1050px) {
 
     .contact-content {
         flex-direction: column;
         text-align: center;
+
     }
 
     .contact-text {
-        max-width: 100%;
+        padding: 0 40px;
     }
 
+ 
+
 }
+
+   @media(max-width:580px) {
+
+
+  .contact-text h2{
+        font-weight:100;
+
+    }
+
+        .contact-form {
+            padding: 30px;
+            position: absolute;
+            max-width: 90%;
+        }
+
+    }

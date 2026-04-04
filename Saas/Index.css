@@ -62,8 +62,45 @@
 * body header .container .btn-contact:hover {
   background-position: right;
 }
-* body header .container .menu-mobile {
-  display: none;
+@media screen and (max-width: 1050px) {
+  * body .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;
+    border: none;
+  }
+  * body .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* Cor das barras */
+    transition: 0.3s;
+  }
+  * body .menu {
+    display: none !important;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 999;
+  }
+  * body .menu.active {
+    display: flex !important;
+  }
+  * body .menu a {
+    padding: 15px 0;
+  }
+}
+* body {
+  /* Esconde o botão hambúrguer em telas grandes */
+}
+@media screen and (min-width: 1050px) {
+  * body .menu-toggle {
+    display: none;
+  }
 }
 * body .hero {
   padding: 80px 0;
@@ -105,7 +142,6 @@
 * body .hero .hero-content .hero-text p {
   color: #aaa;
   margin: 20px 0;
-  padding: 0 30px 0 0;
   max-width: 500px;
 }
 * body .hero .hero-content .hero-text .hero-buttons {
@@ -138,10 +174,14 @@
 * body .hero .hero-content .hero-text .download:hover {
   background: #7344e0;
 }
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   * body .hero-content {
     flex-direction: column;
     text-align: center;
+  }
+  * body .hero-content .hero-image img {
+    width: 90% !important;
+    height: auto;
   }
   * body .hero-buttons {
     justify-content: center;
@@ -155,6 +195,18 @@
   * body .menu-mobile {
     display: show;
     color: wheat;
+  }
+}
+@media (max-width: 1050px) and (max-width: 580px) {
+  * body .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  * body .hero-text p {
+    text-align: center;
+    font-size: 80%;
+    padding: 15px 30px;
   }
 }
 * body .contact {
@@ -295,13 +347,23 @@
   transform: translateY(-2px);
   /* Pequeno pulo para cima */
 }
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   * body .contact-content {
     flex-direction: column;
     text-align: center;
   }
   * body .contact-text {
-    max-width: 100%;
+    padding: 0 40px;
+  }
+}
+@media (max-width: 580px) {
+  * body .contact-text h2 {
+    font-weight: 100;
+  }
+  * body .contact-form {
+    padding: 30px;
+    position: absolute;
+    max-width: 90%;
   }
 }
 * body .main-footer {
