@@ -189,9 +189,18 @@
     }
 
         .contact-form {
-            padding: 30px;
+            padding: 30px !important;
             position: absolute;
-            max-width: 90%;
+            width: 95% !important;
+        }
+
+    }
+
+      @media(max-width:380px) {
+
+
+        .contact-form {
+            padding: 20px !important;
         }
 
     }
