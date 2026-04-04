@@ -1,0 +1,68 @@
+@import './variables';
+
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid $cinza-linha-escuro;
+    position: sticky;
+    top: 0;
+    background: black;
+    z-index: 1000;
+
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            width: 60px;
+            max-width: 70px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+
+            a {
+                color: $cinza-texto;
+                text-decoration: none;
+                transition: 0.2s ease;
+
+
+            }
+
+            a:hover {
+                color: white;
+            }
+
+        }
+
+        .btn-contact {
+            background: linear-gradient(90deg, #8b5cf6, #a855f7, #b79eb9);
+            background-size: 200% 100%;
+            background-position: left;
+
+            border: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            color: black;
+            font-weight: 600;
+            cursor: pointer;
+
+            transition: 0.5s ease;
+        }
+
+        .btn-contact:hover {
+            background-position: right;
+        }
+
+        .menu-mobile {
+            display: none;
+        }
+    }
+}

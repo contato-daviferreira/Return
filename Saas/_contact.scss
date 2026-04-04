@@ -1,0 +1,166 @@
+@import'./variables';
+
+
+.contact {
+    padding: 400px 0;
+
+    .contact-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+
+        .contact-text {
+            max-width: 450px;
+
+            h2 {
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: #aaa;
+                line-height: 1.6;
+            }
+        }
+
+        .contact-form {
+            background: #0a0a0a;
+            padding: 40px;
+            border-radius: 10px;
+            position: relative;
+            width: 460px;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                border: 2px solid #8b5cf6;
+                padding: 30px;
+                border-radius: 10px;
+                width: 100%;
+
+                .form-title {
+                    position: absolute;
+                    top: 23px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: #0a0a0a;
+                    padding: 5px 15px;
+                    color: #8b5cf6;
+                    border-radius: 5px;
+                    font-size: 20px;
+                }
+
+                input:-webkit-autofill,
+                input:-webkit-autofill:hover,
+                input:-webkit-autofill:focus,
+                textarea:-webkit-autofill,
+                textarea:-webkit-autofill:hover,
+                textarea:-webkit-autofill:focus {
+                    /* Substitui o fundo por uma cor sólida (ex: #121212) */
+                    -webkit-box-shadow: 0 0 0px 1000px #0a0a0a inset !important;
+                    /* Define a cor do texto */
+                    -webkit-text-fill-color: rgb(205, 218, 204) !important;
+                    /* Transição suave para evitar "piscadas" */
+                    transition: background-color 5000s ease-in-out 0s;
+                }
+
+                input,
+                textarea {
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid #333;
+                    padding: 10px 0;
+                    color: rgb(205, 218, 204) !important;
+                    outline: none;
+                }
+
+                textarea {
+                    resize: none;
+                    height: 80px;
+                }
+
+                button {
+                    background: linear-gradient(90deg, #8b5cf6, #a855f7);
+                    border: none;
+                    padding: 12px;
+                    border-radius: 5px;
+                    color: #fff;
+                    cursor: pointer;
+                    margin-top: 10px;
+                }
+
+                .input-group {
+                    position: relative;
+                    width: 100%;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid #333;
+                    padding: 10px 0;
+                    color: #fff;
+                    outline: none;
+                    font-size: 14px;
+                    transition: 0.3s ease;
+                }
+                .input-group label {
+                    position: absolute;
+                    left: 0;
+                    top: 10px;
+                    color: #666;
+                    /* Cor cinza quando está parado */
+                    pointer-events: none;
+                    transition: 0.3s ease all;
+                }
+
+                input:focus~label,
+                input:not(:placeholder-shown)~label,
+                textarea:focus~label,
+                textarea:not(:placeholder-shown)~label {
+                    top: -12px;
+                    font-size: 13px;
+                    color: #a855f7;
+                    /* Roxo do seu tema */
+                    font-weight: 500;
+                }
+
+                input:focus,
+                textarea:focus {
+                    border-bottom: 1px solid #a855f7;
+                }
+
+                button[type="submit"] {
+                    transition: filter 0.3s ease, transform 0.2s ease;
+                }
+
+                button[type="submit"]:hover {
+                    filter: brightness(1.2);
+                    /* Dá um brilho no roxo */
+                    transform: translateY(-2px);
+                    /* Pequeno pulo para cima */
+                }
+
+            }
+        }
+    }
+
+}
+
+
+@media(max-width:900px) {
+
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-text {
+        max-width: 100%;
+    }
+
+}

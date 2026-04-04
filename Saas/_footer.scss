@@ -1,0 +1,124 @@
+@import './variables';
+
+
+.main-footer {
+    background-color: #0a0513;
+    /* Preto roxo igual ao seu Header */
+    color: #fff;
+    padding: 60px 0 20px 0;
+    border-top: 1px solid #222;
+    /* Linha sutil no topo */
+    font-family: sans-serif;
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 20px;
+
+
+        .footer-info,
+        .footer-links,
+        .footer-social {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-info {
+
+            .footer-logo {
+                height: 50px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                color: #a1a1aa;
+                line-height: 1.6;
+                font-size: 0.9rem;
+                width: 75%;
+                max-width: 300px;
+            }
+
+        }
+
+        .footer-links {
+
+            h4 {
+                color: #887897;
+                /* Roxo principal */
+                margin-bottom: 20px;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            li {
+                margin-bottom: 12px;
+            }
+
+            a {
+                color: $cinza-texto;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }a:hover{
+                color: white;
+            }
+        }
+
+        .footer-social {
+
+            .social-icons {
+                display: flex;
+                gap: 15px;
+
+                a {
+                    font-size: 1.5rem;
+                    transition: transform 0.3s ease, color 0.3s ease;
+                }
+
+                a:hover {
+                    color: #ffffff !important;
+                    transform: translateY(-5px);
+                }
+            }
+
+        }
+
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+        p {
+            color: #71717a;
+            font-size: 0.8rem;
+        }
+    }
+
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-info p {
+        margin: 0 auto 20px auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 20px;
+    }
+}

@@ -24,7 +24,7 @@ meuForm.addEventListener('submit', function(event) {
   emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
       // 2. O QUE APARECE QUANDO DÁ CERTO:
-      alert('Sua mensagem foi enviada com sucesso! 🚀');
+      alert('Mensagem enviada! Aguarde que logo te retornarei 🚀');
       
       // Limpa os campos do formulário
       meuForm.reset();
