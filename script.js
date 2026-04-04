@@ -1,10 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('mobile-menu');
   const navLinks = document.querySelector('.menu');
+  const links = document.querySelectorAll('.menu a');
 
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
+  // Verifica se os elementos existem antes de adicionar o evento (evita erros no console)
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  } // <--- Faltava fechar o if e organizar as chaves aqui
 });
 
 

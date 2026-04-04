@@ -453,6 +453,9 @@
   * body .footer-info p {
     margin: 0 auto 20px auto;
   }
+  * body .footer-social h4 {
+    padding: 0 0 20px;
+  }
   * body .social-icons {
     justify-content: center;
     gap: 20px;
