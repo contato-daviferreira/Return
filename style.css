@@ -6,7 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 body {
@@ -63,7 +63,7 @@ body {
     padding: 12px 22px;
     border-radius: 25px;
     color: rgb(0, 0, 0);
-    font-weight:600;
+    font-weight: 600;
     cursor: pointer;
 
     transition: 0.5s ease;
@@ -104,13 +104,28 @@ body {
 
 .hero-text h1 {
     font-size: 50px;
-    color: #a855f7;
-    margin: 10px 0;
+    font-weight: bold;
+    font-family: 'Ubuntu', cursive;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, #dba1ec, #7a40c5);
+    margin: 10px 0 0;
+}
+.hero-text h3 {
+    font-size: 15px;
+    font-family: 'roboto', sans-serif;
+    letter-spacing: .05em;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, #e386ff, #4b1abe);
+    background-clip: text;
+    margin: 10px 0 0;
 }
 
 .hero-text p {
     color: #aaa;
     margin: 20px 0;
+    padding: 0 30px 0 0;
     max-width: 500px;
 }
 
@@ -120,6 +135,10 @@ body {
     align-items: center;
     font-size: 13px;
 
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 @media(max-width:900px) {
@@ -173,11 +192,23 @@ body {
         text-align: center;
     }
 
-    .menu {
+    .btn-contact {
         display: none;
     }
+    .menu-mobile {
+    display: show;
+    color: wheat;
+}
+
 
 }
+
+
+
+
+
+
+
 
 /* ENTRE EM CONTATOS */
 
@@ -211,7 +242,7 @@ body {
     padding: 40px;
     border-radius: 10px;
     position: relative;
-    width: 480px;
+    width: 460px;
 }
 
 .contact-form form {
@@ -272,4 +303,171 @@ body {
         max-width: 100%;
     }
 
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+/* Estilo da Label (Letra que vai subir) */
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #666;
+    /* Cor cinza quando está parado */
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+/* --- EFEITO AO CLICAR OU TER TEXTO --- */
+.contact-form input:focus~label,
+.contact-form input:not(:placeholder-shown)~label,
+.contact-form textarea:focus~label,
+.contact-form textarea:not(:placeholder-shown)~label {
+    top: -12px;
+    font-size: 13px;
+    color: #a855f7;
+    /* Roxo do seu tema */
+    font-weight: 500;
+}
+
+/* Linha roxa ao focar */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-bottom: 1px solid #a855f7;
+}
+
+button[type="submit"] {
+  transition: filter 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  filter: brightness(1.2); /* Dá um brilho no roxo */
+  transform: translateY(-2px); /* Pequeno pulo para cima */
+}
+
+
+/*  RODAPE  -----------------------------------*/
+
+
+.main-footer {
+  background-color: #0a0513; /* Preto roxo igual ao seu Header */
+  color: #fff;
+  padding: 60px 0 20px 0;
+  border-top: 1px solid #222; /* Linha sutil no topo */
+  font-family: sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+/* Colunas do Rodapé */
+.footer-info, .footer-links, .footer-social {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.footer-info p {
+  color: #a1a1aa;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  width: 75%;
+  max-width: 300px;
+}
+
+/* Títulos das colunas */
+h4 {
+  color: #887897; /* Roxo principal */
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Estilo dos Links */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #6b6969;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Ícones Sociais */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff !important;
+  transform: translateY(-5px);
+}
+
+/* Faixa de Copyright */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom p {
+  color: #71717a;
+  font-size: 0.8rem;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-info p {
+    margin: 0 auto 20px auto;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 20px;
+  }
 }
