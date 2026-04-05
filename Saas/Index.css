@@ -116,6 +116,10 @@
   max-width: 600px;
   height: auto;
 }
+* body .hero .hero-content .hero-text span {
+  font-size: 16px;
+  margin-left: 4px;
+}
 * body .hero .hero-content .hero-text h1 {
   font-size: 50px;
   font-weight: bold;
@@ -124,7 +128,6 @@
           background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(135deg, #e386ff, #4b1abe);
-  margin: 10px 0 0;
 }
 * body .hero .hero-content .hero-text h3 {
   font-size: 15px;
@@ -171,7 +174,7 @@
 * body .hero .hero-content .hero-text .download:hover {
   background: #7344e0;
 }
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
   * body .hero-content {
     flex-direction: column;
     text-align: center;
@@ -182,6 +185,7 @@
   }
   * body .hero-buttons {
     justify-content: center;
+    padding: 20px 0;
   }
   * body .menu {
     display: none;
@@ -194,7 +198,7 @@
     color: wheat;
   }
 }
-@media (max-width: 1050px) and (max-width: 580px) {
+@media (max-width: 1200px) and (max-width: 580px) {
   * body .hero-text {
     display: flex;
     flex-direction: column;

@@ -21,6 +21,11 @@
 
         .hero-text {
 
+            span {
+                font-size: 16px;
+                margin-left: 4px;
+            }
+
             h1 {
                 font-size: 50px;
                 font-weight: bold;
@@ -28,7 +33,6 @@
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-image: linear-gradient(135deg, $linhear-duplo);
-                margin: 10px 0 0;
 
             }
 
@@ -44,7 +48,7 @@
             }
 
             p {
-                color: #aaa;
+                color: $cinza-texto-claro;
                 margin: 20px 0;
                 max-width: 500px;
             }
@@ -90,19 +94,23 @@
     }
 }
 
-@media(max-width:1050px) {
+@media(max-width:1200px) {
 
     .hero-content {
         flex-direction: column;
         text-align: center;
-            .hero-image img {
+
+        .hero-image img {
             width: 90% !important;
             height: auto;
+
         }
+
     }
 
     .hero-buttons {
         justify-content: center;
+        padding: 20px 0;
     }
 
     .menu {
@@ -116,7 +124,6 @@
     .menu-mobile {
         display: show;
         color: wheat;
-
 
     }
 
