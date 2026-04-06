@@ -1,7 +1,7 @@
 @import './variables';
 
 
-.main-footer {
+footer {
     background-color: #0a0513;
     /* Preto roxo igual ao seu Header */
     color: #fff;
@@ -18,6 +18,13 @@
         flex-wrap: wrap;
         padding: 0 20px;
 
+        h4 {
+            color: #887897;
+            /* Roxo principal */
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
 
         .footer-info,
         .footer-links,
@@ -25,6 +32,7 @@
             flex: 1;
             min-width: 250px;
             margin-bottom: 30px;
+            padding-left: 100px;
         }
 
         .footer-info {
@@ -46,13 +54,7 @@
 
         .footer-links {
 
-            h4 {
-                color: #887897;
-                /* Roxo principal */
-                margin-bottom: 20px;
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
+
 
             ul {
                 list-style: none;
@@ -67,7 +69,9 @@
                 color: $cinza-texto;
                 text-decoration: none;
                 transition: color 0.3s ease;
-            }a:hover{
+            }
+
+            a:hover {
                 color: white;
             }
         }
@@ -113,10 +117,17 @@
         text-align: center;
     }
 
+    .footer-info,
+    .footer-links,
+    .footer-social {
+        padding-left: 0px !important;
+    }
+
     .footer-info p {
         margin: 0 auto 20px auto;
     }
-    .footer-social h4{
+
+    .footer-social h4 {
         padding: 0 0 20px;
     }
 

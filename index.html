@@ -1,204 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Davi Ferreira</title>
-  <link rel="stylesheet" href="./Saas/Index.css">
-  <link rel="icon" type="image/icon" href="img/favicon.ico">
-
-
-
-
-
-  <link rel="apple-touch-icon" href="/logo192.png" />
-  <link rel="manifest" href="./favicons/manifest.json" />
-  <link rel="apple-touch-icon" tamanhos="57x57" href="./favicons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" tamanhos="60x60" href="./favicons/apple-icon-60x60.png">
-  <link rel=" apple-touch-icon " tamanhos=" 72x72 " href="./favicons/apple-icon-72x72.png">
-  <link rel=" apple-touch-icon " tamanhos="76x76" href="./favicons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon " tamanhos=" 114x114 " href="./favicons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" tamanhos="120x120" href="./favicons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" tamanhos="144x144" href="./favicons/apple-icon-144x144.png">
-  <link rel=" apple-touch-icon " tamanhos=" 152x152 " href="./favicons/apple-icon-152x152.png">
-  <link rel=" apple-touch-icon " tamanhos="180x180" href="./favicons/apple-icon-180x180.png">
-  <link rel="ícone" type="imagem/png" tamanhos="192x192" href="./favicons/android-icon-192x192.png">
-  <link rel="icon" type="image/png  " size="32x32" href="./favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" tamanhos="96x96" href="./favicons/favicon-96x96.png">
-  <link rel="icon" type="image/png" tamanhos="16x16" href="./favicons/favicon-16x16.png">
-  <link rel=" manifesto " href="./favicons/manifest.json">
-  <meta name="msapplication-TileColor" content="#000000">
-</head>
+<head id="head"></head>
 
 <body>
 
   <!-- HEADER -->
+  <header id="header"></header>
+
+  <!-- PRESENTATION -->
+  <section class="hero" id="apresentacao"></section>
+
+  <!-- SCROLL DOWN -->
+  <div class="scroll-container"><i class="fa-solid fa-angles-down"></i></div>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contato"></section>
+
+  <!-- FOOTER -->
+  <footer id="footer"></footer>
 
 
-  <header class="header">
-    <div class="container nav">
-
-      <img src=".\img\ds-logo.png" class="logo">
-      <nav class="menu">
-        <a href="#">Home</a>
-        <a href="#">Tecnologias</a>
-        <a href="#">Projetos</a>
-        <a href="#">Sobre</a>
-      </nav>
-
-      <button class="btn-contact" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})"
-        class="btn-contato">
-        Entre em contato
-      </button>
-
-  <button class="menu-toggle" id="mobile-menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </button>
-
-    </div>
-  </header>
-
-
-  <!-- APRESENTAÇÂO -->
-
-  <section class="hero">
-    <div class="container hero-content">
-
-      <div class="hero-text">
-
-        <span>Olá, meu nome é</span>
-
-        <h1>Davi Ferreira</h1>
-
-        <h3>IT Support Engineer | Front-End Developer </h3>
-
-        <p>
-          Profissional de TI com experiência em suporte técnico presencial e remoto, atendimento a usuários
-          corporativos, configuração de equipamentos e suporte a ambientes Microsoft e Linux. Graduado em Análise e
-          Desenvolvimento de Sistemas com foco em automação, programação e suporte técnico avançado.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="https://www.linkedin.com/in/contato-daviferreira/" class="btn-primary" target="_blank">LinkedIn</a>
-          <a href=".\doc\Currículo TI - Davi Ferreira 04-2026.pdf" class="download" target="_blank">Download CV</a>
-        </div>
-
-      </div>
-
-      <div class="hero-image">
-        <img src="img/principal-home.png" alt="Hero">
-      </div>
-
-    </div>
-  </section>
-
-
-
-  <!-- Scroll Down -->
-
-  <div class="scroll-container">
-  <i class="fa-solid fa-angles-down"></i> </div>
-
-
-
-
-<!-- CONTATO -->
-
-  <section class="contact" id="contato">
-    <div class="container contact-content">
-
-      <div class="contact-text">
-        <h2>Entre em contato</h2>
-        <p>
-          Atendimento para suporte técnico, infraestrutura,
-          configuração de ambientes e resolução de problemas.
-          Entre em contato e vamos conversar sobre seu projeto.
-        </p>
-      </div>
-
-      <div class="contact-form">
-        <form id="form">
-          <span class="form-title">Formulário</span>
-
-          <div class="input-group">
-            <input type="text" id="nome" name="nome" placeholder=" " required>
-            <label for="nome">Nome *</label>
-          </div>
-          <div class="input-group">
-            <input type="email" id="email" name="email" placeholder=" ">
-            <label for="email">E-mail</label>
-          </div>
-
-          <div class="input-group">
-            <input type="tel" id="tel" name="telefone" placeholder=" ">
-            <label for="tel">Telefone</label>
-          </div>
-
-          <div class="input-group">
-            <input type="text" id="assunto" name="assunto" placeholder=" ">
-            <label for="assunto">Assunto</label>
-          </div>
-
-          <div class="input-group">
-            <textarea id="mensagem" placeholder=" " name="mensagem" required></textarea>
-            <label for="mensagem">Mensagem *</label>
-          </div>
-
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-
-    </div>
-  </section>
-
-<!-- RODAPÉ -->
-
-  <footer class="main-footer">
-  <div class="footer-container">
-    
-    <div class="footer-info">
-      <img src="./img/ds-logo.png" alt="Logo" class="footer-logo">
-      <p>Transformando ideias em experiências digitais únicas e inovadoras.</p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Navegação</h4>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#tecnologias">Tecnologias</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-social">
-      <h4>Redes Sociais</h4>
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/contato-daviferreira/" style="color: #045EC0;" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/contato-daviferreira" style="color: #494949;" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://wa.me/5511988834971" style="color: #309844" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; 2026 - Davi Ferreira. Todos os direitos reservados.</p>
-  </div>
-</footer>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-
-
-  <script src="./script.js"></script>
+   <script src="./script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
+    <script type="text/javascript">
     (function () {
-      emailjs.init("mAVssxnbcxtjcglb3");
+      emailjs.init("mAVssxnbcxtjcglb3")
     })();
   </script>
 

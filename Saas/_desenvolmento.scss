@@ -1,0 +1,55 @@
+@use './variables';
+
+
+.manutencao {
+    height: 600px;
+    width: 100%;
+    text-align: center;
+
+    display: flex;
+    align-items: center; //Centraliza na vertical
+    justify-content: center; //Centraliza na horizontal
+    flex-direction: column; //Um elemento em cima do outro
+
+
+    
+
+}
+
+.des-engrenagem {
+    width: 150px;
+
+    /* Animação */
+    animation: rodar 10s linear infinite;
+}
+
+/* Animação de rotação */
+@keyframes rodar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.des-titulo {
+    margin: 40px 0;
+    font-size: 15px;
+
+    /* Animação */
+    animation: cor 5s linear infinite;
+}
+
+/* Animação de cor nome */
+@keyframes cor {
+    0% {
+        color: $cinza-linha-escuro
+    }
+    50% {
+        color: $cinza-texto
+    }
+    100% {
+        color: $cinza-linha-escuro
+    }
+}
