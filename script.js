@@ -100,4 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById("desenvolvimento").innerHTML = data;
     });
 
-});
+  //Carrossel
+    fetch("./partials/carrossel.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("carousel").innerHTML = data;
+
+    // Inicia o carrossel depois de carregar
+    var elem = document.querySelector('.carousel');
+    var instance = M.Carousel.init(elem);
+
+    instance.set(1);
+  });});
+  

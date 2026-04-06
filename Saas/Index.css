@@ -21,7 +21,7 @@
   position: sticky;
   top: 0;
   background: black;
-  z-index: 1000;
+  z-index: 999;
 }
 * body header .container {
   max-width: 1200px;
@@ -121,6 +121,7 @@
 * body .hero .hero-content .hero-text span {
   font-size: 16px;
   margin-left: 4px;
+  color: #ebdad5;
 }
 * body .hero .hero-content .hero-text h1 {
   font-size: 50px;
@@ -130,6 +131,7 @@
           background-clip: text;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(135deg, #e386ff, #4b1abe);
+  margin-top: 5px;
 }
 * body .hero .hero-content .hero-text h3 {
   font-size: 15px;
@@ -214,6 +216,7 @@
 }
 * body .scroll-container {
   margin-top: 50px;
+  margin-bottom: 200px;
   color: #7344e0;
   display: flex;
   font-size: 60px;
@@ -232,6 +235,22 @@
   60% {
     transform: translateY(-5px);
   }
+}
+* body .carousel {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+* body .carousel .carousel-item img {
+  width: 100%;
+}
+* body .carousel h1 {
+  margin-top: -500px 0;
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
+  color: #ebdad5;
 }
 * body .contact {
   padding: 300px 0;
@@ -252,6 +271,7 @@
 * body .contact .contact-content .contact-text h2 {
   font-size: 32px;
   margin-bottom: 20px;
+  color: #ebdad5;
 }
 * body .contact .contact-content .contact-text p {
   color: #aaa;
