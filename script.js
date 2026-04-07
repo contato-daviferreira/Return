@@ -1,55 +1,66 @@
 // Botao MENU para mobiles e tablets
 document.addEventListener('DOMContentLoaded', () => {
 
-   var elem = document.querySelector('.carousel');
-    var instance = M.Carousel.init(elem);
+  //CAROUSEL
+  var elem = document.querySelector('.carousel');
+  var instance = M.Carousel.init(elem);
+  instance.set(5);
 
-    instance.set(5);
 
-      // Pegue o elemento do formulário e o botão
-      const meuForm = document.getElementById('form'); // Verifique se o seu <form> tem id="form"
-      const btnEnviar = meuForm.querySelector('button[type="submit"]');
 
-      meuForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Impede a página de recarregar
 
-        // 1. Feedback visual de que está enviando
-        const textoOriginal = btnEnviar.innerText;
-        btnEnviar.innerText = 'Enviando...';
-        btnEnviar.style.opacity = '0.7';
-        btnEnviar.disabled = true;
+  // Pegue o elemento do formulário e o botão
+  const meuForm = document.getElementById('form'); // Verifique se o seu <form> tem id="form"
+  const btnEnviar = meuForm.querySelector('button[type="submit"]');
 
-        const serviceID = 'service_8e4zx8l';
-        const templateID = 'template_fymsq2g'; // Pegue no painel do EmailJS
+  meuForm.addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede a página de recarregar
 
-        emailjs.sendForm(serviceID, templateID, this)
-          .then(() => {
-            // 2. O QUE APARECE QUANDO DÁ CERTO:
-            alert('Mensagem enviada! Aguarde que logo te retornarei 🚀');
+    // 1. Feedback visual de que está enviando
+    const textoOriginal = btnEnviar.innerText;
+    btnEnviar.innerText = 'Enviando...';
+    btnEnviar.style.opacity = '0.7';
+    btnEnviar.disabled = true;
 
-            // Limpa os campos do formulário
-            meuForm.reset();
+    const serviceID = 'service_8e4zx8l';
+    const templateID = 'template_fymsq2g'; // Pegue no painel do EmailJS
 
-            // Volta o botão ao estado normal
-            btnEnviar.innerText = textoOriginal;
-            btnEnviar.style.opacity = '1';
-            btnEnviar.disabled = false;
+    emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        // 2. O QUE APARECE QUANDO DÁ CERTO:
+        alert('Mensagem enviada! Aguarde que logo te retornarei 🚀');
 
-          }, (err) => {
-            // O QUE APARECE SE DER ERRO:
-            alert('Ops! Algo deu errado. Tente novamente mais tarde.');
-            console.log('Erro:', err);
+        // Limpa os campos do formulário
+        meuForm.reset();
 
-            btnEnviar.innerText = textoOriginal;
-            btnEnviar.style.opacity = '1';
-            btnEnviar.disabled = false;
-          });
+        // Volta o botão ao estado normal
+        btnEnviar.innerText = textoOriginal;
+        btnEnviar.style.opacity = '1';
+        btnEnviar.disabled = false;
+
+      }, (err) => {
+        // O QUE APARECE SE DER ERRO:
+        alert('Ops! Algo deu errado. Tente novamente mais tarde.');
+        console.log('Erro:', err);
+
+        btnEnviar.innerText = textoOriginal;
+        btnEnviar.style.opacity = '1';
+        btnEnviar.disabled = false;
       });
-    //Carrossel
+  });
 
-  
-   
- 
 
- });
-  
+
+
+
+});
+
+    // MENU MOBILE
+  const menuToggle = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.menu');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
