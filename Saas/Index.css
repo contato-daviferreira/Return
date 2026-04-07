@@ -37,6 +37,9 @@ html {
   width: 60px;
   max-width: 70px;
 }
+* body header .container .menu-toggle {
+  display: none;
+}
 * body header .container .menu {
   display: flex;
   align-items: center;
@@ -50,6 +53,9 @@ html {
 }
 * body header .container .menu a:hover {
   color: white;
+}
+* body header .container .menu .mobile-contato {
+  display: none;
 }
 * body header .container .btn-contact {
   background: linear-gradient(90deg, #8b5cf6, #a855f7, #b79eb9);
@@ -66,23 +72,9 @@ html {
 * body header .container .btn-contact:hover {
   background-position: right;
 }
-@media screen and (max-width: 1050px) {
-  * body .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-    background: none;
-    border: none;
-  }
-  * body .menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff; /* Cor das barras */
-    transition: 0.3s;
-  }
-  * body .menu {
-    display: none !important;
+@media screen and (max-width: 1200px) {
+  * body header .container .menu {
+    display: none;
     flex-direction: column;
     position: absolute;
     top: 80px;
@@ -91,16 +83,33 @@ html {
     background-color: black;
     z-index: 999;
   }
-  * body .menu.active {
-    display: flex !important;
-  }
-  * body .menu a {
+  * body header .container .menu a {
     padding: 15px 0;
   }
-}
-@media screen and (min-width: 1050px) {
-  * body .menu-toggle {
-    display: none;
+  * body header .container .menu .mobile-contato {
+    display: flex;
+  }
+  * body header .container .menu.active {
+    display: flex;
+    padding-bottom: 25px;
+  }
+  * body header .container .menu.active a {
+    padding: 5px 0;
+  }
+  * body header .container .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;
+    border: none;
+  }
+  * body header .container .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #aaa;
+    /* Cor das barras */
+    transition: 0.3s;
   }
 }
 * body .hero {

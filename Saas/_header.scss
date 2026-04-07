@@ -1,109 +1,135 @@
 @import './variables';
 
 header {
-    padding: 20px 0;
-    border-bottom: 1px solid $cinza-linha-escuro;
-    position: sticky;
-    top: 0;
-    background: black;
-    z-index: 999;
+  padding: 20px 0;
+  border-bottom: 1px solid $cinza-linha-escuro;
+  position: sticky;
+  top: 0;
+  background: black;
+  z-index: 999;
 
-    .container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 0 20px;
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        .logo {
-            width: 60px;
-            max-width: 70px;
-        }
-
-        .menu {
-            display: flex ;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-
-            a {
-                color: $cinza-texto;
-                text-decoration: none;
-                transition: 0.2s ease;
-
-
-            }
-
-            a:hover {
-                color: white;
-            }
-
-        }
-
-        .btn-contact {
-            background: linear-gradient(90deg, #8b5cf6, #a855f7, #b79eb9);
-            background-size: 200% 100%;
-            background-position: left;
-
-            border: none;
-            padding: 12px 22px;
-            border-radius: 25px;
-            color: black;
-            font-weight: 600;
-            cursor: pointer;
-
-            transition: 0.5s ease;
-        }
-
-        .btn-contact:hover {
-            background-position: right;
-        }
-    }
-}
-
-
-@media screen and (max-width:1050px) {
-  .menu-toggle {
     display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-    background: none;
-    border: none;
-  }
+    align-items: center;
+    justify-content: space-between;
 
-  .menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff; /* Cor das barras */
-    transition: 0.3s;
-  }
+    .logo {
+      width: 60px;
+      max-width: 70px;
+    }
 
-  .menu {
-    display: none !important; // Esconde o menu fixo
-    flex-direction: column;
-    position: absolute;
-    top: 80px; // Aumente um pouco para não cobrir a borda do header
-    left: 0;
-    width: 100%;
-    background-color: black;
-    z-index: 999;
-  }
+    .menu-toggle {
+      display: none;
+    }
 
-  // Isso garante que o clique funcione
-  .menu.active {
-    display: flex !important;
-  }
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+
+      a {
+        color: $cinza-texto;
+        text-decoration: none;
+        transition: 0.2s ease;
 
 
-  .menu a {
-    padding: 15px 0;
+      }
+
+      a:hover {
+        color: white;
+      }
+
+      .mobile-contato {
+        display: none;
+
+
+      }
+
+    }
+
+    .btn-contact {
+      background: linear-gradient(90deg, #8b5cf6, #a855f7, #b79eb9);
+      background-size: 200% 100%;
+      background-position: left;
+
+      border: none;
+      padding: 12px 22px;
+      border-radius: 25px;
+      color: black;
+      font-weight: 600;
+      cursor: pointer;
+
+      transition: 0.5s ease;
+    }
+
+    .btn-contact:hover {
+      background-position: right;
+    }
   }
 }
-@media screen and (min-width: 1050px) {
-  .menu-toggle {
-    display: none;
+
+
+@media screen and (max-width:1200px) {
+
+  header {
+    .container {
+
+      .menu {
+        display: none; // Esconde o menu fixo
+        flex-direction: column;
+        position: absolute;
+        top: 80px; // Aumente um pouco para não cobrir a borda do header
+        left: 0;
+        width: 100%;
+        background-color: black;
+        z-index: 999;
+
+        a {
+          padding: 15px 0;
+        }
+
+        .mobile-contato {
+          display: flex;
+
+
+        }
+
+      }
+
+      .menu.active {
+        display: flex;
+        padding-bottom: 25px;
+        a {
+          padding: 5px 0;
+
+        }
+      }
+
+      .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        background: none;
+        border: none;
+
+        .bar {
+          width: 25px;
+          height: 3px;
+          background-color: $cinza-texto-claro;
+          /* Cor das barras */
+          transition: 0.3s;
+        }
+      }
+
+
+    }
+
   }
+
 }
