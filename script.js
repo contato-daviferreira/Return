@@ -1,4 +1,3 @@
-// Botao MENU para mobiles e tablets
 document.addEventListener('DOMContentLoaded', () => {
 
   //CAROUSEL
@@ -11,12 +10,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENU MOBILE
   const menuToggle = document.getElementById('mobile-menu');
   const navLinks = document.querySelector('.menu');
+  const menuItems = document.querySelectorAll('.menu a');
 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
     });
   }
+  // Fecha o menu ao clicar em qualquer link
+menuItems.forEach(item => {
+  item.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+  });
+});
+
+
 
   // FORMULÁRIO
   const meuForm = document.getElementById('form');
