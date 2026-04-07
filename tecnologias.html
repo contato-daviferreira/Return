@@ -5,13 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Davi Ferreira</title>
-    <!-- Materialize CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-  
   <link rel="stylesheet" href="/Saas/Index.css">
-  <link rel="icon" type="image/icon" href="img/favicon.ico">
-
-  <link rel="apple-touch-icon" href="/logo192.png" />
+  
+  <link rel="icon" type="image/icon" href="./img/favicon.ico">
   <link rel="manifest" href="./favicons/manifest.json" />
   <link rel="apple-touch-icon" sizes="57x57" href="./favicons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="./favicons/apple-icon-60x60.png">
@@ -33,25 +29,89 @@
 
 <body>
 
-    <header id="header"></header>
+  <header id="header">
+    <div class="container">
 
-  <div></div>
-      <!--TECH -->
-  <div class="materialize-area">
-    <div class="carousel" id="carousel"></div>
-  </div>
+      <img src="/img/ds-logo.png" class="logo">
+      <div class="menu">
+        <a href="/index.html">Home</a>
+        <a href="/tecnologias.html">Tecnologias</a>
+        <a href="#">Projetos</a>
+        <a href="#">Sobre</a>
+      </div>
+
+      <button class="btn-contact" onclick="document.getElementById('contato').scrollIntoView({behavior: 'smooth'})">
+        Entre em contato
+      </button>
+
+      <button class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+  <!--TECH -->
+    <div class="carousel"">
+
+      <h1>Tecnologias</h1>
+
+      <a class="carousel-item"><img src="img/java-logo_svgstack_com_28601775499086.png"></a>
+      <a class="carousel-item"><img src="img/cdnlogo.com_javascript.png"></a>
+      <a class="carousel-item"><img src="img/cdnlogo.com_python.png"></a>
+      <a class="carousel-item"><img src="img/cdnlogo.com_bootstrap-5.png"></a>
+      <a class="carousel-item"><img src="img/cdnlogo.com_sass.png"></a>
+      <a class="carousel-item"><img src="img/cdnlogo.com_react.png"></a>
+      <a class="carousel-item"><img src="img/cdnlogo.com_vitejs.png"></a>
+      <a class="carousel-item"><img src="img/cdnlogo.com_css3.png"></a>
+      <a class="carousel-item"><img src="img/cdnlogo.com_html5.png"></a>
+</div>
 
 
-    <!-- <div id="desenvolvimento"></div> -->
 
 
-    <footer id="footer"></footer>
+  <footer id="footer">
+    <div class="footer-container">
 
-    <script src="./script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+      <div class="footer-info">
+        <img src="./img/ds-logo.png" alt="Logo" class="footer-logo">
+        <p>Transformando ideias em experiências digitais únicas e inovadoras.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/tecnologias.html">Tecnologias</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Redes Sociais</h4>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/contato-daviferreira/" style="color: #045EC0;" aria-label="LinkedIn"><i
+              class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/contato-daviferreira" style="color: #494949;" aria-label="GitHub"><i
+              class="fab fa-github"></i></a>
+          <a href="https://wa.me/5511988834971" style="color: #309844" aria-label="WhatsApp"><i
+              class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 - Davi Ferreira. Todos os direitos reservados.</p>
+    </div>
+  </footer>
   <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
+    <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <script src="./script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </body>
 

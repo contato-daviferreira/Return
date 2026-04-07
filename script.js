@@ -1,35 +1,10 @@
 // Botao MENU para mobiles e tablets
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Header
-  fetch("./partials/header.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("header").innerHTML = data;
+   var elem = document.querySelector('.carousel');
+    var instance = M.Carousel.init(elem);
 
-      const menuToggle = document.getElementById('mobile-menu');
-      const navLinks = document.querySelector('.menu');
-      const links = document.querySelectorAll('.menu a');
-
-      // Verifica se os elementos existem antes de adicionar o evento (evita erros no console)
-      if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-          navLinks.classList.toggle('active');
-        });
-
-        links.forEach(link => {
-          link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-          });
-        });
-      } // <--- Faltava fechar o if e organizar as chaves aqui
-    });
-
-  // Contato
-  fetch("./partials/contato.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("contato").innerHTML = data;
+    instance.set(5);
 
       // Pegue o elemento do formulário e o botão
       const meuForm = document.getElementById('form'); // Verifique se o seu <form> tem id="form"
@@ -70,46 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
             btnEnviar.disabled = false;
           });
       });
-    });
+    //Carrossel
 
-  // Head
-  fetch("./partials/head.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("head").innerHTML = data;
-    });
+  
+   
+ 
 
-  // Apresentação
-  fetch("./partials/apresentacao.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("apresentacao").innerHTML = data;
-    });
-
-  // Rodapé
-  fetch("./partials/footer.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("footer").innerHTML = data;
-    });
-
-  // Desenvolvimento ou Manutenção
-  fetch("./partials/desenvolvimento.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("desenvolvimento").innerHTML = data;
-    });
-
-  //Carrossel
-    fetch("./partials/carrossel.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("carousel").innerHTML = data;
-
-    // Inicia o carrossel depois de carregar
-    var elem = document.querySelector('.carousel');
-    var instance = M.Carousel.init(elem);
-
-    instance.set(1);
-  });});
+ });
   

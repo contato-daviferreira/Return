@@ -1,13 +1,15 @@
 .carousel {
   height: 500px;
   width: 100%;
-  
-  display: flex;
   text-align: center;
-  justify-content: center;
 
-  .carousel-item img {
-    width: 100%;
+
+  .carousel .carousel-item {
+  width: 100px;
+}
+
+  .carousel-item img{
+    width: 100% ;
   }
   h1 {
     margin-top: -500px 0;

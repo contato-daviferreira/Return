@@ -12,8 +12,6 @@
 * body {
   background: #000;
   color: white;
-  /* Animação de rotação */
-  /* Animação de cor nome */
 }
 * body header {
   padding: 20px 0;
@@ -238,9 +236,10 @@
 * body .carousel {
   height: 500px;
   width: 100%;
-  display: flex;
   text-align: center;
-  justify-content: center;
+}
+* body .carousel .carousel .carousel-item {
+  width: 100px;
 }
 * body .carousel .carousel-item img {
   width: 100%;
@@ -521,45 +520,6 @@
   * body .social-icons {
     justify-content: center;
     gap: 20px;
-  }
-}
-* body .manutencao {
-  height: 600px;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-* body .des-engrenagem {
-  width: 150px;
-  /* Animação */
-  animation: rodar 10s linear infinite;
-}
-@keyframes rodar {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-* body .des-titulo {
-  margin: 40px 0;
-  font-size: 15px;
-  /* Animação */
-  animation: cor 5s linear infinite;
-}
-@keyframes cor {
-  0% {
-    color: #222;
-  }
-  50% {
-    color: #6b6969;
-  }
-  100% {
-    color: #222;
   }
 }
 * body .bg-black-100 {
