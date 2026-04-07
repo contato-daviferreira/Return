@@ -257,11 +257,11 @@ html {
 * body .carousel .carousel-item img {
   width: 100%;
 }
-* body .carousel h1 {
+* body .carousel h2 {
   margin-top: -500px 0;
   font-size: 32px;
-  font-family: "Roboto", sans-serif;
   color: #ebdad5;
+  font-weight: 100;
 }
 * body .espaco {
   height: 100px;
@@ -287,6 +287,7 @@ html {
   font-size: 32px;
   margin-bottom: 20px;
   color: #ebdad5;
+  font-weight: 100;
 }
 * body .contact .contact-content .contact-text p {
   color: #aaa;
@@ -411,9 +412,6 @@ html {
   * body .contact .contact-content {
     flex-direction: column;
     text-align: center;
-  }
-  * body .contact .contact-content .contact-text h2 {
-    font-weight: 100;
   }
 }
 @media (max-width: 380px) {
