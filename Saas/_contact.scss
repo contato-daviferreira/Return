@@ -1,12 +1,11 @@
 @import'./variables';
 
-
 .contact {
-        padding: 300px 0;
-        display: flex;
-        background-image: linear-gradient(180deg, #000, #1c011d, #000);
-        align-items: center;
-        justify-content: center;
+    padding: 300px 0 200px;
+    display: flex;
+    background-image: linear-gradient(180deg, #000, #1c011d, #000);
+    align-items: center;
+    justify-content: center;
 
     .contact-content {
         display: flex;
@@ -15,6 +14,7 @@
         gap: 80px;
 
         .contact-text {
+            width: 100%;
             max-width: 450px;
 
             h2 {
@@ -31,10 +31,11 @@
 
         .contact-form {
             background: #0a0a0a;
-            padding: 40px;
+            padding: 35px;
             border-radius: 10px;
             position: relative;
-            width: 460px;
+            width: 100%;
+            max-width: 450px;
             opacity: 0.8;
 
             form {
@@ -48,7 +49,7 @@
 
                 .form-title {
                     position: absolute;
-                    top: 23px;
+                    top: 15px;
                     left: 50%;
                     transform: translateX(-50%);
                     background: #0a0a0a;
@@ -77,9 +78,16 @@
                     background: transparent;
                     border: none;
                     border-bottom: 1px solid #333;
-                    padding: 10px 0;
-                    color: rgb(205, 218, 204) !important;
+
+                    color: rgb(205, 218, 204);
                     outline: none;
+                    //adicionado 
+
+                    height: 10px;
+                }
+
+                input {
+                    padding: 10px 0px;
                 }
 
                 textarea {
@@ -102,18 +110,7 @@
                     width: 100%;
                 }
 
-                input,
-                textarea {
-                    width: 100%;
-                    background: transparent;
-                    border: none;
-                    border-bottom: 1px solid #333;
-                    padding: 10px 0;
-                    color: #fff;
-                    outline: none;
-                    font-size: 14px;
-                    transition: 0.3s ease;
-                }
+
 
                 .input-group label {
                     position: absolute;
@@ -123,6 +120,7 @@
                     /* Cor cinza quando está parado */
                     pointer-events: none;
                     transition: 0.3s ease all;
+                    font-size: 14px;
                 }
 
                 input:focus~label,
@@ -153,55 +151,44 @@
                 }
 
             }
-        
+
         }
     }
 
 }
 
 
-@media(max-width:1050px) {
 
-    .contact{
+@media(max-width:1215px) {
+
+    .contact {
 
         padding: 200px 0;
 
-    .contact-content {
-        flex-direction: column;
-        text-align: center;
+        .contact-content {
+            flex-direction: column;
+            text-align: center;
+
+            .contact-text h2{
+                font-weight: 100;
+            }
+
+        }
 
     }
+}
 
-    .contact-text {
-        padding: 0 40px;
-    }
 
- 
+@media(max-width:380px) {
+    .contact {
+        .contact-content {
+            .contact-form {
+                padding: 20px;
+            }
 
-}}
-
-   @media(max-width:580px) {
-
-    
-    
-  .contact-text h2{
-        font-weight:100;
-
-    }
-
-        .contact-form {
-            padding: 30px !important;
-            position: absolute;
-            width: 95% !important;
         }
 
     }
 
-      @media(max-width:380px) {
 
-
-        .contact-form {
-            padding: 20px !important;
-        }
-
-    }
+}
