@@ -29,3 +29,12 @@
         transform: translateY(-5px);
     }
 }
+
+@media(max-width:500px) {
+
+    .scroll-container{
+        font-size: 50px;
+
+    }
+
+}

@@ -30,7 +30,6 @@ footer {
         .footer-links,
         .footer-social {
             flex: 1;
-            min-width: 250px;
             margin-bottom: 30px;
             padding-left: 100px;
         }
@@ -38,7 +37,7 @@ footer {
         .footer-info {
 
             .footer-logo {
-                height: 50px;
+                width: 50px;
                 margin-bottom: 20px;
             }
 
@@ -112,27 +111,38 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
 
-    .footer-info,
-    .footer-links,
-    .footer-social {
-        padding-left: 0px !important;
-    }
+    footer {
 
-    .footer-info p {
-        margin: 0 auto 20px auto;
-    }
+        .footer-container {
+            flex-direction: column;
+            text-align: center;
 
-    .footer-social h4 {
-        padding: 0 0 20px;
-    }
+            .footer-info{
+                align-items: center;
+            }
 
-    .social-icons {
-        justify-content: center;
-        gap: 20px;
+            .footer-info,
+            .footer-links,
+            .footer-social {
+                padding-left: 0px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .footer-info p {
+                margin: 0 auto 20px auto;
+            }
+
+            .footer-social h4 {
+                padding: 0 0 20px;
+            }
+
+            .social-icons {
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+
     }
 }

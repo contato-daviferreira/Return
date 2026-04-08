@@ -178,6 +178,11 @@
 @media(max-width:380px) {
     .contact {
         .contact-content {
+            .contact-text{
+                h2{
+                    margin-top: unset;
+                }
+            }
             .contact-form {
                 padding: 20px;
             }
