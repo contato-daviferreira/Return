@@ -281,13 +281,12 @@ html {
   width: 100%;
 }
 * body .carousel h2 {
-  margin-top: -500px 0;
   font-size: 32px;
   color: #ebdad5;
   font-weight: 100;
 }
 * body .espaco {
-  height: 100px;
+  height: 150px;
 }
 @media (max-width: 580px) {
   * body .carousel .carousel-item img {
@@ -442,12 +441,19 @@ html {
     text-align: center;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 400px) {
+  * body .contact {
+    padding-bottom: 100px;
+  }
   * body .contact .contact-content .contact-text h2 {
     margin-top: unset;
   }
   * body .contact .contact-content .contact-form {
     padding: 20px;
+  }
+  * body .contact .contact-content .contact-form form .form-title {
+    padding-top: unset;
+    margin-top: -10px;
   }
 }
 * body footer {
@@ -458,6 +464,7 @@ html {
   border-top: 1px solid #222;
   /* Linha sutil no topo */
   font-family: sans-serif;
+  margin-top: 120px;
 }
 * body footer .footer-container {
   max-width: 1200px;

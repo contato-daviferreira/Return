@@ -175,16 +175,31 @@
 }
 
 
-@media(max-width:380px) {
+@media(max-width:400px) {
     .contact {
+
+        padding-bottom: 100px;
+
         .contact-content {
-            .contact-text{
-                h2{
+
+            .contact-text {
+                h2 {
                     margin-top: unset;
                 }
+
             }
+
             .contact-form {
                 padding: 20px;
+
+                form {
+
+                    .form-title {
+                        padding-top: unset;
+                        margin-top: -10px;
+
+                    }
+                }
             }
 
         }
