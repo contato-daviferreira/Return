@@ -28,3 +28,11 @@
 .espaco {
   height: 100px;
 }
+
+@media(max-width:580px) {
+  .carousel {
+    .carousel-item img{
+      width: 95%;
+    }
+  }
+}
