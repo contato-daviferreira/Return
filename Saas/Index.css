@@ -312,7 +312,7 @@ html {
 }
 * body .contact .contact-content .contact-text h2 {
   font-size: 32px;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   color: #ebdad5;
   font-weight: 100;
 }
@@ -322,11 +322,11 @@ html {
 }
 * body .contact .contact-content .contact-form {
   background: #0a0a0a;
-  padding: 35px;
+  padding: 30px;
   border-radius: 10px;
   position: relative;
   width: 100%;
-  max-width: 450px;
+  max-width: 400px;
   opacity: 0.8;
 }
 * body .contact .contact-content .contact-form form {
@@ -337,17 +337,6 @@ html {
   padding: 30px;
   border-radius: 10px;
   width: 100%;
-}
-* body .contact .contact-content .contact-form form .form-title {
-  position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #0a0a0a;
-  padding: 5px 15px;
-  color: #8b5cf6;
-  border-radius: 5px;
-  font-size: 20px;
 }
 * body .contact .contact-content .contact-form form input:-webkit-autofill,
 * body .contact .contact-content .contact-form form input:-webkit-autofill:hover,
@@ -377,7 +366,7 @@ html {
 }
 * body .contact .contact-content .contact-form form textarea {
   resize: none;
-  height: 80px;
+  height: 90px;
 }
 * body .contact .contact-content .contact-form form button {
   background: linear-gradient(90deg, #8b5cf6, #a855f7);
@@ -403,7 +392,7 @@ html {
   font-size: 14px;
 }
 * body .contact .contact-content .contact-form form input:not(:-moz-placeholder) ~ label, * body .contact .contact-content .contact-form form textarea:not(:-moz-placeholder) ~ label {
-  top: -12px;
+  top: -13px;
   font-size: 13px;
   color: #a855f7;
   /* Roxo do seu tema */
@@ -413,15 +402,23 @@ html {
 * body .contact .contact-content .contact-form form input:not(:placeholder-shown) ~ label,
 * body .contact .contact-content .contact-form form textarea:focus ~ label,
 * body .contact .contact-content .contact-form form textarea:not(:placeholder-shown) ~ label {
-  top: -12px;
+  top: -13px;
   font-size: 13px;
   color: #a855f7;
   /* Roxo do seu tema */
   font-weight: 500;
 }
+* body .contact .contact-content .contact-form form textarea:not(:-moz-placeholder) ~ label {
+  top: -20px;
+}
+* body .contact .contact-content .contact-form form textarea:focus ~ label,
+* body .contact .contact-content .contact-form form textarea:not(:placeholder-shown) ~ label {
+  top: -20px;
+}
 * body .contact .contact-content .contact-form form input:focus,
 * body .contact .contact-content .contact-form form textarea:focus {
   border-bottom: 1px solid #a855f7;
+  top: -12px;
 }
 * body .contact .contact-content .contact-form form button[type=submit] {
   transition: filter 0.3s ease, transform 0.2s ease;
@@ -450,10 +447,6 @@ html {
   }
   * body .contact .contact-content .contact-form {
     padding: 20px;
-  }
-  * body .contact .contact-content .contact-form form .form-title {
-    padding-top: unset;
-    margin-top: -10px;
   }
 }
 * body footer {

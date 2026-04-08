@@ -19,7 +19,7 @@
 
             h2 {
                 font-size: 32px;
-                margin-bottom: 20px;
+                margin: 0 0 20px;
                 color: #ebdad5;
                 font-weight: 100;
             }
@@ -32,11 +32,11 @@
 
         .contact-form {
             background: #0a0a0a;
-            padding: 35px;
+            padding: 30px;
             border-radius: 10px;
             position: relative;
             width: 100%;
-            max-width: 450px;
+            max-width: 400px;
             opacity: 0.8;
 
             form {
@@ -47,18 +47,6 @@
                 padding: 30px;
                 border-radius: 10px;
                 width: 100%;
-
-                .form-title {
-                    position: absolute;
-                    top: 15px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background: #0a0a0a;
-                    padding: 5px 15px;
-                    color: #8b5cf6;
-                    border-radius: 5px;
-                    font-size: 20px;
-                }
 
                 input:-webkit-autofill,
                 input:-webkit-autofill:hover,
@@ -93,7 +81,7 @@
 
                 textarea {
                     resize: none;
-                    height: 80px;
+                    height: 90px;
                 }
 
                 button {
@@ -111,8 +99,6 @@
                     width: 100%;
                 }
 
-
-
                 .input-group label {
                     position: absolute;
                     left: 0;
@@ -128,16 +114,22 @@
                 input:not(:placeholder-shown)~label,
                 textarea:focus~label,
                 textarea:not(:placeholder-shown)~label {
-                    top: -12px;
+                    top: -13px;
                     font-size: 13px;
                     color: #a855f7;
                     /* Roxo do seu tema */
                     font-weight: 500;
                 }
 
+                textarea:focus~label,
+                textarea:not(:placeholder-shown)~label {
+                    top: -20px;
+                }
+
                 input:focus,
                 textarea:focus {
                     border-bottom: 1px solid #a855f7;
+                    top: -12px;
                 }
 
                 button[type="submit"] {
@@ -191,15 +183,6 @@
 
             .contact-form {
                 padding: 20px;
-
-                form {
-
-                    .form-title {
-                        padding-top: unset;
-                        margin-top: -10px;
-
-                    }
-                }
             }
 
         }
