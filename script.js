@@ -5,8 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   var instance = M.Carousel.init(elem);
   instance.set(5);
 
-});
+  //ID DA CONTA/EMAIL QUE RECEBERÁ O CONTATO
+  emailjs.init("mAVssxnbcxtjcglb3");
 
+});
 
 // MENU MOBILE
 const menuToggle = document.getElementById('mobile-menu');
@@ -18,18 +20,16 @@ if (menuToggle && navLinks) {
     navLinks.classList.toggle('active');
   });
 }
-// Fecha o menu ao clicar em qualquer link
+
+// FECHAR MENU AO ESCOLHER OPÇÃO
 menuItems.forEach(item => {
   item.addEventListener('click', () => {
     navLinks.classList.remove('active');
   });
 });
 
-
-
-// FORMULÁRIO
+// FORMULÁRIO DE CONTATO
 const meuForm = document.getElementById('form');
-
 if (meuForm) {
   const btnEnviar = meuForm.querySelector('button[type="submit"]');
 
@@ -63,6 +63,7 @@ if (meuForm) {
   });
 }
 
+//FORMATAR INPUT TELEFONE
 document.getElementById('tel').addEventListener('input', function (e) {
   let value = e.target.value.replace(/\D/g, '');
 
