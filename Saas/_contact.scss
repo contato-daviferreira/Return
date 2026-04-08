@@ -5,11 +5,24 @@
     align-items: center;
     justify-content: center;
 
+    @include mobileM {
+        padding-bottom: 100px;
+    }
+
+    @include desktop {
+        padding: 200px 0;
+    }
+
     .contact-content {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 80px;
+
+        @include desktop {
+            flex-direction: column;
+            text-align: center;
+        }
 
         .contact-text {
             width: 100%;
@@ -20,6 +33,10 @@
                 margin: 0 0 20px;
                 color: #ebdad5;
                 font-weight: 100;
+
+                @include mobileM {
+                    margin-top: unset;
+                }
             }
 
             p {
@@ -36,6 +53,10 @@
             width: 100%;
             max-width: 400px;
             opacity: 0.8;
+
+            @include mobileM{
+                padding: 20px;
+            }
 
             form {
                 display: flex;
@@ -145,47 +166,5 @@
 
         }
     }
-
-}
-
-
-
-@media(max-width:1215px) {
-
-    .contact {
-
-        padding: 200px 0;
-
-        .contact-content {
-            flex-direction: column;
-            text-align: center;
-        }
-
-    }
-}
-
-
-@media(max-width:400px) {
-    .contact {
-
-        padding-bottom: 100px;
-
-        .contact-content {
-
-            .contact-text {
-                h2 {
-                    margin-top: unset;
-                }
-
-            }
-
-            .contact-form {
-                padding: 20px;
-            }
-
-        }
-
-    }
-
 
 }

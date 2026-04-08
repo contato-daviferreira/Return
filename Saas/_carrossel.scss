@@ -4,12 +4,29 @@
   text-align: center;
 
 
-  .carousel .carousel-item {
-    width: 100px;
-  }
+  .carousel-item {
+    width: 300px;
 
-  .carousel-item img {
-    width: 100%;
+    @include tablet {
+      width: 200px;
+    }
+
+    @include mobileG {
+      width: 120px;
+    }
+
+    img {
+      width: 200px;
+
+      @include tablet {
+        width: 150px;
+      }
+
+      @include mobileG {
+        width: 120px;
+      }
+
+    }
   }
 
   h2 {
@@ -26,12 +43,4 @@
 
 .espaco {
   height: 150px;
-}
-
-@media(max-width:580px) {
-  .carousel {
-    .carousel-item img{
-      width: 95%;
-    }
-  }
 }

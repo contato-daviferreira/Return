@@ -16,6 +16,11 @@ footer {
         flex-wrap: wrap;
         padding: 0 20px;
 
+        @include tablet {
+            flex-direction: column;
+            text-align: center;
+        }
+
         h4 {
             color: #887897;
             /* Roxo principal */
@@ -30,9 +35,18 @@ footer {
             flex: 1;
             margin-bottom: 30px;
             padding-left: 100px;
+
+            @include tablet {
+                padding-left: 0px;
+                display: flex;
+                flex-direction: column;
+            }
         }
 
         .footer-info {
+            @include tablet {
+                align-items: center;
+            }
 
             .footer-logo {
                 width: 50px;
@@ -45,6 +59,10 @@ footer {
                 font-size: 0.9rem;
                 width: 75%;
                 max-width: 300px;
+
+                @include tablet {
+                    margin: 0 auto 20px auto;
+                }
             }
 
         }
@@ -71,9 +89,22 @@ footer {
             a:hover {
                 color: white;
             }
+
         }
 
         .footer-social {
+
+            @include tablet {
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+
+            @include tablet {
+                h4 {
+                    margin: 20px 0 0;
+                }
+            }
 
             .social-icons {
                 display: flex;
@@ -88,6 +119,8 @@ footer {
                     color: #ffffff !important;
                     transform: translateY(-5px);
                 }
+
+
             }
 
         }
@@ -106,41 +139,4 @@ footer {
         }
     }
 
-}
-
-@media (max-width: 768px) {
-
-    footer {
-
-        .footer-container {
-            flex-direction: column;
-            text-align: center;
-
-            .footer-info{
-                align-items: center;
-            }
-
-            .footer-info,
-            .footer-links,
-            .footer-social {
-                padding-left: 0px;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .footer-info p {
-                margin: 0 auto 20px auto;
-            }
-
-            .footer-social h4 {
-                padding: 0 0 20px;
-            }
-
-            .social-icons {
-                justify-content: center;
-                gap: 20px;
-            }
-        }
-
-    }
 }

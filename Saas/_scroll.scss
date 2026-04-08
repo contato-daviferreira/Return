@@ -7,6 +7,10 @@
     align-items: center;
     animation: bounce 2s infinite;
     cursor: pointer;
+
+    @include mobileG {
+        font-size: 50px;
+    }
 }
 
 @keyframes bounce {
@@ -26,13 +30,4 @@
     60% {
         transform: translateY(-5px);
     }
-}
-
-@media(max-width:500px) {
-
-    .scroll-container{
-        font-size: 50px;
-
-    }
-
 }
