@@ -1,0 +1,104 @@
+
+
+.container-sobre {
+  margin-top: 200px;
+  width: 100%;
+  padding: 80px 20px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 700px;
+
+  position: relative;
+  z-index: 1;
+
+
+  .about-me {
+    text-align: center;
+    font-size: 32px;
+    color: #ebdad5;
+    font-weight: 100;
+    margin-bottom: 60px;
+  }
+
+  .linha-sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    width: 100%;
+    gap: 60px;
+    margin-bottom: 80px;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s ease forwards;
+
+    .texto-sobre {
+      max-width: 500px;
+
+      h3 {
+        color: white;
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      p {
+        margin: 200px;
+        width: 100%;
+        color: #b3b3b3;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  /* Alternando lados */
+  .linha-sobre:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+
+  .linha-sobre:nth-child(even) {
+    flex-direction: row;
+  }
+}
+
+/* Animação */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .container-sobre {
+
+    .linha-sobre {
+      flex-direction: column !important;
+      text-align: center;
+      gap: 30px;
+    }
+
+    .about-me {
+      font-size: 26px;
+    }
+  }
+}
+.container-sobre::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url('/img/davinew.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.09; /* aqui controla a opacidade */
+  z-index: -1;
+}

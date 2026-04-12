@@ -1,3 +1,4 @@
+
 .carousel {
   height: 500px;
   width: 100%;
@@ -6,6 +7,9 @@
 
   .carousel-item {
     width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @include tablet {
       width: 200px;
@@ -43,4 +47,5 @@
 
 .espaco {
   height: 150px;
+  display: none;
 }

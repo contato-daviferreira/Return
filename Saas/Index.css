@@ -273,45 +273,6 @@ html {
     transform: translateY(-5px);
   }
 }
-* body .carousel {
-  height: 500px;
-  width: 100%;
-  text-align: center;
-}
-* body .carousel .carousel-item {
-  width: 300px;
-}
-@media (max-width: 800px) {
-  * body .carousel .carousel-item {
-    width: 200px;
-  }
-}
-@media (max-width: 580px) {
-  * body .carousel .carousel-item {
-    width: 120px;
-  }
-}
-* body .carousel .carousel-item img {
-  width: 200px;
-}
-@media (max-width: 800px) {
-  * body .carousel .carousel-item img {
-    width: 150px;
-  }
-}
-@media (max-width: 580px) {
-  * body .carousel .carousel-item img {
-    width: 120px;
-  }
-}
-* body .carousel h2 {
-  font-size: 32px;
-  color: #ebdad5;
-  font-weight: 100;
-}
-* body .espaco {
-  height: 150px;
-}
 * body .contact {
   padding: 300px 0 200px;
   display: flex;
