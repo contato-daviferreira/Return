@@ -19,18 +19,11 @@ footer {
         @include tablet {
             flex-direction: column;
             text-align: center;
-        }
+            padding: 0;
 
-        h4 {
-            color: #887897;
-            /* Roxo principal */
-            margin-bottom: 20px;
-            font-size: 1.2rem;
-            font-weight: bold;
         }
 
         .footer-info,
-        .footer-links,
         .footer-social {
             flex: 1;
             margin-bottom: 30px;
@@ -40,59 +33,53 @@ footer {
                 padding-left: 0px;
                 display: flex;
                 flex-direction: column;
+                margin-bottom: 20px;
             }
         }
 
         .footer-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             @include tablet {
                 align-items: center;
             }
 
+            @include mobileG {
+                padding: 0;
+            }
+
             .footer-logo {
                 width: 50px;
-                margin-bottom: 20px;
+                height: 50px;
+
+                @include tablet {
+                    margin-bottom: 15px;
+                }
             }
 
             p {
                 color: #a1a1aa;
+                padding-left: 20px;
                 line-height: 1.6;
                 font-size: 0.9rem;
                 width: 75%;
                 max-width: 300px;
 
                 @include tablet {
-                    margin: 0 auto 20px auto;
+                    width: 100%;
+                    margin: 0 0 20px;
+                    padding: 0;
                 }
             }
 
         }
 
-        .footer-links {
-
-
-
-            ul {
-                list-style: none;
-                padding: 0;
-            }
-
-            li {
-                margin-bottom: 12px;
-            }
-
-            a {
-                color: $cinza-texto;
-                text-decoration: none;
-                transition: color 0.3s ease;
-            }
-
-            a:hover {
-                color: white;
-            }
-
-        }
-
         .footer-social {
+
+            display: flex;
+            align-items: center;
 
             @include tablet {
                 justify-content: center;
@@ -100,18 +87,12 @@ footer {
                 gap: 20px;
             }
 
-            @include tablet {
-                h4 {
-                    margin: 20px 0 0;
-                }
-            }
-
             .social-icons {
                 display: flex;
-                gap: 15px;
+                gap: 18px;
 
                 a {
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     transition: transform 0.3s ease, color 0.3s ease;
                 }
 

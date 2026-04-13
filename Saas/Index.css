@@ -457,17 +457,10 @@ html {
   * body footer .footer-container {
     flex-direction: column;
     text-align: center;
+    padding: 0;
   }
 }
-* body footer .footer-container h4 {
-  color: #887897;
-  /* Roxo principal */
-  margin-bottom: 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
 * body footer .footer-container .footer-info,
-* body footer .footer-container .footer-links,
 * body footer .footer-container .footer-social {
   flex: 1;
   margin-bottom: 30px;
@@ -475,24 +468,40 @@ html {
 }
 @media (max-width: 800px) {
   * body footer .footer-container .footer-info,
-  * body footer .footer-container .footer-links,
   * body footer .footer-container .footer-social {
     padding-left: 0px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
   }
+}
+* body footer .footer-container .footer-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 800px) {
   * body footer .footer-container .footer-info {
     align-items: center;
   }
 }
+@media (max-width: 580px) {
+  * body footer .footer-container .footer-info {
+    padding: 0;
+  }
+}
 * body footer .footer-container .footer-info .footer-logo {
   width: 50px;
-  margin-bottom: 20px;
+  height: 50px;
+}
+@media (max-width: 800px) {
+  * body footer .footer-container .footer-info .footer-logo {
+    margin-bottom: 15px;
+  }
 }
 * body footer .footer-container .footer-info p {
   color: #a1a1aa;
+  padding-left: 20px;
   line-height: 1.6;
   font-size: 0.9rem;
   width: 75%;
@@ -500,23 +509,14 @@ html {
 }
 @media (max-width: 800px) {
   * body footer .footer-container .footer-info p {
-    margin: 0 auto 20px auto;
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 0;
   }
 }
-* body footer .footer-container .footer-links ul {
-  list-style: none;
-  padding: 0;
-}
-* body footer .footer-container .footer-links li {
-  margin-bottom: 12px;
-}
-* body footer .footer-container .footer-links a {
-  color: #6b6969;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-* body footer .footer-container .footer-links a:hover {
-  color: white;
+* body footer .footer-container .footer-social {
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 800px) {
   * body footer .footer-container .footer-social {
@@ -525,17 +525,12 @@ html {
     gap: 20px;
   }
 }
-@media (max-width: 800px) {
-  * body footer .footer-container .footer-social h4 {
-    margin: 20px 0 0;
-  }
-}
 * body footer .footer-container .footer-social .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 18px;
 }
 * body footer .footer-container .footer-social .social-icons a {
-  font-size: 1.5rem;
+  font-size: 2rem;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 * body footer .footer-container .footer-social .social-icons a:hover {
