@@ -28,6 +28,11 @@ menuItems.forEach(item => {
   });
 });
 
+//ID DA CONTA/EMAIL QUE RECEBERÁ O CONTATO
+(function () {
+  emailjs.init("mAVssxnbcxtjcglb3");
+})();
+
 // FORMULÁRIO DE CONTATO
 const meuForm = document.getElementById('form');
 if (meuForm) {
