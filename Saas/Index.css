@@ -547,6 +547,59 @@ html {
   color: #71717a;
   font-size: 0.8rem;
 }
+* body .about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 700px;
+  width: 100%;
+}
+* body .about h2 {
+  color: #ebdad5;
+  font-weight: 100;
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 100px;
+}
+* body .about .container-main {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  background: #0a0a0a;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  opacity: 0.8;
+}
+* body .about .container-main .container-esquerdo p,
+* body .about .container-main .container-direito p {
+  color: #6b6969;
+}
+* body .about .container-main .container-esquerdo {
+  text-align: right;
+  max-width: 300px;
+}
+* body .about .container-main .container-esquerdo .titulo-art {
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #e386ff, #4b1abe);
+}
+* body .about .container-main .container-direito {
+  padding-left: 10px;
+  max-width: 300px;
+}
+* body .about .container-main .container-direito .titulo-pessoal {
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #e0bcae, #BE1A20);
+}
+* body .about .container-main .container-centro img {
+  opacity: 0.7;
+  width: 400px;
+}
 * body .bg-black-100 {
   padding: 200px 10% 0 10%;
   background-image: linear-gradient(180deg, #000, #1c011d, #000);
