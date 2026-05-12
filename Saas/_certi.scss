@@ -1,5 +1,5 @@
 .gallery-section {
-  padding: 250px 2rem;
+  padding: 200px 2rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@
     @include tablet {
       display: flex;
       flex-direction: column;
-
+      align-items: center;
 
     }
 
@@ -50,7 +50,7 @@
         font-size: 2.2rem;
         font-weight: 100;
         margin: 0;
-        color: #ebdad5;
+        color: #c3a7c4;
 
         @include tablet {
           position: relative;
@@ -58,13 +58,13 @@
       }
 
       h2 {
-        font-size: 32px;
+        font-size: 2rem;
         font-weight: 700;
         margin: 0;
 
-        @include mobileG {
-          font-size: 2rem;
-        }
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(135deg, $linhear-duplo);
 
         @include tablet {
           margin: -35px 0 20px;
@@ -96,6 +96,8 @@
       @include tablet {
         height: 90px;
         border-radius: 1rem;
+        max-width: 400px;
+        width: 90%;
       }
     }
 
