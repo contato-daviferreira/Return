@@ -92,3 +92,30 @@ document.getElementById('tel').addEventListener('input', function (e) {
   e.target.value = value;
 
 });
+
+// MODAL
+const modal = document.getElementById("certModal");
+const frame = document.getElementById("certFrame");
+const closeBtn = document.querySelector(".close");
+
+// abre modal ao clicar na imagem
+document.querySelectorAll(".cert-thumb").forEach(img => {
+  img.addEventListener("click", () => {
+    frame.src = img.dataset.pdf;
+    modal.style.display = "flex";
+  });
+});
+
+// fecha modal
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  frame.src = "";
+});
+
+// fecha ao clicar fora
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    frame.src = "";
+  }
+});

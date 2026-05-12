@@ -307,7 +307,7 @@ html {
   max-width: 450px;
 }
 * body .contact .contact-content .contact-text h2 {
-  font-size: 32px;
+  font-size: 2.2rem;
   margin: 0 0 20px;
   color: #ebdad5;
   font-weight: 100;
@@ -320,6 +320,11 @@ html {
 * body .contact .contact-content .contact-text p {
   color: #aaa;
   line-height: 1.6;
+}
+@media (max-width: 800px) {
+  * body .contact .contact-content .contact-text p {
+    font-size: 1rem;
+  }
 }
 * body .contact .contact-content .contact-form {
   background: #0a0a0a;
@@ -443,7 +448,7 @@ html {
   border-top: 1px solid #222;
   /* Linha sutil no topo */
   font-family: sans-serif;
-  margin-top: 120px;
+  margin-top: 50px;
 }
 * body footer .footer-container {
   max-width: 1200px;
@@ -512,6 +517,7 @@ html {
     width: 100%;
     margin: 0 0 20px;
     padding: 0;
+    font-size: 1rem;
   }
 }
 * body footer .footer-container .footer-social {
@@ -528,6 +534,11 @@ html {
 * body footer .footer-container .footer-social .social-icons {
   display: flex;
   gap: 18px;
+}
+@media (max-width: 580px) {
+  * body footer .footer-container .footer-social .social-icons a i {
+    font-size: 35px;
+  }
 }
 * body footer .footer-container .footer-social .social-icons a {
   font-size: 2rem;
@@ -599,6 +610,178 @@ html {
 * body .about .container-main .container-centro img {
   opacity: 0.7;
   width: 400px;
+}
+* body .gallery-section {
+  padding: 250px 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+* body .gallery-section .gallery-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 180px;
+  gap: 1rem;
+  width: 1000px;
+}
+@media (max-width: 580px) {
+  * body .gallery-section .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  * body .gallery-section .gallery-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+* body .gallery-section .gallery-container {
+  /* TÍTULO NO CANTO INFERIOR ESQUERDO */
+}
+* body .gallery-section .gallery-container .gallery-title {
+  position: absolute;
+  bottom: 1rem;
+  right: 5rem;
+  z-index: 10;
+}
+@media (max-width: 580px) {
+  * body .gallery-section .gallery-container .gallery-title {
+    position: static;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 800px) {
+  * body .gallery-section .gallery-container .gallery-title {
+    position: relative;
+    inset: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+* body .gallery-section .gallery-container .gallery-title h1 {
+  position: absolute;
+  font-size: 2.2rem;
+  font-weight: 100;
+  margin: 0;
+  color: #ebdad5;
+}
+@media (max-width: 800px) {
+  * body .gallery-section .gallery-container .gallery-title h1 {
+    position: relative;
+  }
+}
+* body .gallery-section .gallery-container .gallery-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+}
+@media (max-width: 580px) {
+  * body .gallery-section .gallery-container .gallery-title h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 800px) {
+  * body .gallery-section .gallery-container .gallery-title h2 {
+    margin: -35px 0 20px;
+  }
+}
+* body .gallery-section .gallery-container {
+  /* ITENS */
+}
+* body .gallery-section .gallery-container .gallery-item {
+  overflow: hidden;
+  border-radius: 8rem;
+  border-color: #8b5cf6;
+  border-style: solid;
+  border-width: 2px;
+  position: relative;
+}
+* body .gallery-section .gallery-container .gallery-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.4s ease;
+}
+* body .gallery-section .gallery-container .gallery-item:hover img {
+  transform: scale(1.05);
+}
+@media (max-width: 800px) {
+  * body .gallery-section .gallery-container .gallery-item {
+    height: 90px;
+    border-radius: 1rem;
+  }
+}
+* body .gallery-section .gallery-container {
+  /* TAMANHOS VARIÁVEIS (efeito mosaico) */
+}
+* body .gallery-section .gallery-container .item-1 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+* body .gallery-section .gallery-container .item-2 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+* body .gallery-section .gallery-container .item-3 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+* body .gallery-section .gallery-container .item-4 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+* body .gallery-section .gallery-container .item-5 {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+* body .gallery-section .gallery-container .item-6 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+* body .gallery-section {
+  /* MODAL */
+}
+* body .gallery-section .modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: transparent;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+@media (max-width: 400px) {
+  * body .gallery-section .modal {
+    width: 95vw;
+  }
+}
+* body .gallery-section .modal .modal-content {
+  position: relative;
+  width: 85%;
+  height: 85%;
+  background: #3C3C3C;
+  border-radius: 10px;
+  overflow: hidden;
+}
+@media (max-width: 400px) {
+  * body .gallery-section .modal .modal-content {
+    width: 100%;
+  }
+}
+* body .gallery-section .modal .modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 32px;
+  cursor: pointer;
+}
+* body .gallery-section .modal .modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 * body .bg-black-100 {
   padding: 200px 10% 0 10%;

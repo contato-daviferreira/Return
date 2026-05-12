@@ -6,7 +6,7 @@ footer {
     border-top: 1px solid #222;
     /* Linha sutil no topo */
     font-family: sans-serif;
-    margin-top: 120px;
+    margin-top: 50px;
 
     .footer-container {
         max-width: 1200px;
@@ -71,6 +71,8 @@ footer {
                     width: 100%;
                     margin: 0 0 20px;
                     padding: 0;
+                    font-size: 1rem;
+                
                 }
             }
 
@@ -90,6 +92,11 @@ footer {
             .social-icons {
                 display: flex;
                 gap: 18px;
+                @include mobileG{
+                    a i{
+                        font-size: 35px;
+                    }
+                }
 
                 a {
                     font-size: 2rem;

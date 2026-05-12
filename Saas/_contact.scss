@@ -29,7 +29,7 @@
             max-width: 450px;
 
             h2 {
-                font-size: 32px;
+                font-size: 2.2rem;
                 margin: 0 0 20px;
                 color: #ebdad5;
                 font-weight: 100;
@@ -42,6 +42,9 @@
             p {
                 color: $cinza-texto-claro;
                 line-height: 1.6;
+                @include tablet{
+                    font-size: 1rem;
+                }
             }
         }
 
