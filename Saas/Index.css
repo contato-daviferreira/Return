@@ -41,6 +41,12 @@ html {
     width: 50px;
   }
 }
+* body header .container .logo {
+  transition: transform 0.3s ease;
+}
+* body header .container .logo:hover {
+  transform: scale(1.1);
+}
 * body header .container .menu-toggle {
   display: none;
 }
@@ -89,8 +95,12 @@ html {
     padding: 15px 0;
   }
 }
+* body header .container .menu a {
+  transition: transform 0.3s ease;
+}
 * body header .container .menu a:hover {
   color: white;
+  transform: scale(1.1);
 }
 * body header .container .menu .mobile-contato {
   display: none;

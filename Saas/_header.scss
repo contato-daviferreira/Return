@@ -22,8 +22,13 @@ header {
       @include tablet {
         width: 50px;
       }
+
+      transition: transform 0.3s ease;
     }
 
+    .logo:hover {
+      transform: scale(1.1);
+    }   
     .menu-toggle {
       display: none;
 
@@ -73,10 +78,16 @@ header {
         @include tablet {
           padding: 15px 0;
         }
+
+        transition: transform 0.3s ease;
       }
 
       a:hover {
         color: white;
+
+    
+      transform: scale(1.1);
+    
       }
 
       .mobile-contato {
@@ -94,11 +105,13 @@ header {
       .menu.active {
         display: flex;
         padding-bottom: 25px;
+
         a {
           padding: 5px 0;
         }
       }
     }
+
     .btn-contact {
       background: linear-gradient(90deg, #8b5cf6, #a855f7, #b79eb9);
       background-size: 200% 100%;
