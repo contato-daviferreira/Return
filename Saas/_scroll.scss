@@ -1,5 +1,6 @@
 .scroll-container {
-    margin-top: 50px;
+    padding-top: 50px;
+    background-color: $preto;
     color: $roxo-claro;
     display: flex;
     font-size: 60px;
@@ -7,6 +8,7 @@
     align-items: center;
     animation: bounce 2s infinite;
     cursor: pointer;
+    
 
     @include mobileG {
         font-size: 50px;
@@ -15,6 +17,7 @@
 
 @keyframes bounce {
 
+    
     0%,
     20%,
     50%,
@@ -30,4 +33,5 @@
     60% {
         transform: translateY(-5px);
     }
+    
 }

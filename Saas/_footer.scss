@@ -2,11 +2,10 @@ footer {
     background-color: #0a0513;
     /* Preto roxo igual ao seu Header */
     color: #fff;
-    padding: 60px 0 20px 0;
+    padding: 100px 0 20px 0;
     border-top: 1px solid #222;
     /* Linha sutil no topo */
     font-family: sans-serif;
-    margin-top: 50px;
 
     .footer-container {
         max-width: 1200px;
@@ -103,8 +102,8 @@ footer {
                     transition: transform 0.3s ease, color 0.3s ease;
                 }
 
-                a:hover {
-                    color: #ffffff !important;
+                :hover {
+                    color: #ffffff;
                     transform: translateY(-5px);
                 }
 

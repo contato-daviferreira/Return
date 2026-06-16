@@ -1,14 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  //CAROUSEL
+/*   //CAROUSEL
   var elem = document.querySelector('.carousel');
   var instance = M.Carousel.init(elem);
   instance.set(5);
+ */
 
   //ID DA CONTA/EMAIL QUE RECEBERÁ O CONTATO
   emailjs.init("mAVssxnbcxtjcglb3");
 
 });
+
+
+// MODO LIGHT / DARK
+const btnMode = document.getElementById('btn-mode');
+const body = document.body;
+const header = document.querySelector('header');
+const toggle = document.getElementById("theme-toggle");
+
+toggle.addEventListener("change", () => {
+  document.body.classList.toggle("light-mode");
+  console.log(document.body.classList);
+});
+
+
+
 
 // MENU MOBILE
 const menuToggle = document.getElementById('mobile-menu');
@@ -28,10 +44,11 @@ menuItems.forEach(item => {
   });
 });
 
-//ID DA CONTA/EMAIL QUE RECEBERÁ O CONTATO
+/* //ID DA CONTA/EMAIL QUE RECEBERÁ O CONTATO
 (function () {
   emailjs.init("mAVssxnbcxtjcglb3");
 })();
+ */
 
 // FORMULÁRIO DE CONTATO
 const meuForm = document.getElementById('form');
